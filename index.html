@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Pesan truzz</title>
+    <link rel="stylesheet" href="style.css">
+    
+
+</head>
+
+<body>
+    <div class="container">
+        
+        <div class="salam">
+            <h1>Grapefut</h1>
+            <p id="customer">halo selamat datang di Grapefut 
+            </p>
+        </div>
+        <div class="makanan">
+            <h1>Markotop(Makanan Top)</h1>
+            <br />
+            <div class="menu1">
+                <img src="salmon-518032_1920.jpg" class="gambar">
+                <span class="nama">Steak ikan salmon</span>
+                
+                <button id="kurang" class="tombolkurang satu">-</button>
+                <input type="text" name='qty' id="data" value="0" class="angka">
+                <button id="tambah" class="tomboltambah">+</button>
+            
+            </div>
+            <br />
+            <br />
+            <div class="menu2">
+                <img src="pizza-3007395_1920.jpg" class="gambar">
+                <span class="nama">Pizza mozzarella khas malang</span>
+                <button id="kurang" class="tombolkurang">-</button>
+                <input type="text" name='qty' id="data" value="0" class="angka">
+                <button id="tambah" class="tomboltambah">+</button>
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="minuman">
+            <h1>Mager (Minuman seger)</h1>
+            <br />
+            <div class="minum1" klik()>
+                <img src="boba-4402055_1920.jpg" class="gambar">
+                <span class="nama">Boba milk tea japan</span>
+                <button id="kurang" class="tombolkurang dua">-</button>
+                <input type="text" name='qty' id="data" value="0" class="angka">
+                <button id="tambah" class="tomboltambah">+</button>
+            </div>
+            <br />
+            <br />
+            <div class="minum2">
+                <img src="cocktail-1869860_1920.jpg" class="gambar">
+                <span class="nama">Cocktail coca cola </span>
+                <button id="kurang" class="tombolkurang satu">-</button>
+                <input type="text" name='qty' id="data" value="0" class="angka">
+                <button id="tambah" class="tomboltambah">+</button>
+            </div>
+        </div>
+        <br/>
+        <br/>
+        <!--Konten LIFF v2-->
+ 
+        <div id="liffAppContent">
+            <!-- ACTION BUTTONS -->
+            <div class="buttonGroup">
+                <div class="buttonRow">
+                    
+                    <button id="closeWindowButton" class="btn btn-danger btn-small"></button>
+                    <button id="sendMessageButton" class="btn btn-warning btn-small">Send Message</button>
+                </div>
+ 
+            </div>
+ 
+             <!-- LIFF DATA -->
+             <div id="liffData">
+                <h3 id="liffDataHeader" class="textLeft"></h3>
+                <table>
+                    <tr>
+                        <th></th>
+                        <td id="isInClient" class="textLeft"></td>
+                    </tr>
+                    <tr>
+                        <th> </th>
+                        <td id="isLoggedIn" class="textLeft"></td>
+                    </tr>
+                </table>
+            </div>
+            <br/>
+            <!-- LOGIN LOGOUT BUTTONS -->
+            <div class="buttonGroup">
+                <button id="liffLoginButton" class="btn btn-success btn-small">Log in</button>
+                <button id="liffLogoutButton" class="btn btn-warning btn-small">Log out</button>
+            </div>
+            <div id="statusMessage">
+                <div id="isInClientMessage"></div>
+                <div id="apiReferenceMessage">
+                    <p> <a
+                            href="https://developers.line.biz/en/reference/liff/#initialize-liff-app">
+                            </a> </p>
+                </div>
+            </div>
+        </div>
+        <button id="openWindowButton" class="btn btn-success btn-small">Open External Window</button>
+        </div>
+         <!-- LIFF DATA -->
+         <div id="liffData">
+            <h3 id="liffDataHeader" class="textLeft"></h3>
+            <table>
+                <tr>
+                    <th></th>
+                    <td id="isInClient" class="textLeft"></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td id="isLoggedIn" class="textLeft"></td>
+                </tr>
+            </table>
+        </div>
+        
+      
+    </div>
+
+
+</body>
+<script src="fungsi.js"></script>
+<script src="https://static.line-scdn.net/liff/edge/versions/2.3.0/sdk.js"></script>
+<script src="liff.js"></script>
+<script>
+    async function main(){
+    await liff.init({liffId:""})//use your own ID
+    if(liff.isLoggedIn()){
+        getUserProfile()
+       
+    }else{
+        liff.login()
+        
+    }
+}
+main()
+async function getUserProfile(){
+    const profile = await liff.getProfile()
+    document.getElementById('customer').append(profile.displayName)
+}
+</script>
+
+
+</html>

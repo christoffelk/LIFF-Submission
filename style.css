@@ -1,0 +1,106 @@
+
+
+.container{
+    border: 1px solid #cecece;
+    border-radius: 3px;
+    padding: 3px 10px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+    height: 70%;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow:auto;
+}
+.gambar{
+    float: left;
+    width: 60px;
+    height: 45px;
+}
+
+.tomboltambah,.tombolkurang,.angka{
+    float: left;
+    padding-right: 10px;
+    padding-left: 10px;
+    
+}
+
+input{
+    width: 14px;
+    border-color: white;
+    color: black;
+}
+img,h1,.salam{
+    margin-left: 10px;
+    text-align: center;
+}
+.menu1,.menu2,.minum1,.minum2{
+    width: 1000px;
+    height: 30px;
+}
+.nama{
+    padding-left: 10px;
+    float: left;
+    
+}
+
+.tombolkurang,.tomboltambah{
+        border: 1px solid #cecece;
+		border-radius: 3px;
+		padding: 3px 10px;
+		box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+		color: white;
+        background-color:green;
+        opacity: 0.7;
+       
+}
+.tombolkurang{
+    margin-left: 15px;
+    float: left;
+}
+
+.tombolkurang:hover,.tomboltambah:hover{
+    border: 1px solid #b1b1b1;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    background-color: rgba(107, 177, 2, 0.863);
+}
+
+#isInClient,#isLoggedIn{
+    color: white;
+    
+}
+
+#liffLoginButton
+{
+    width: 75px;
+    height: 50px;
+    background-color: rgb(2, 172, 2);
+    opacity: 0.8;
+    color: white;
+   
+}
+#liffLogoutButton{
+    background:none;
+    opacity: 0.5;
+    border: none;
+}
+
+#closeWindowButton{
+    background:none;
+    border: none;
+    opacity: 0;
+}
+
+#sendMessageButton{
+    background-color: chartreuse;
+    border: none;
+    width: 105px;
+    height: 50px;
+    float: left;
+    margin-top: 30px;
+    background-color: rgb(2, 172, 2);
+    opacity: 0.8;
+    color: white;
+}
+
+#isInClientMessage{
+    margin-top: 20px;
+}
